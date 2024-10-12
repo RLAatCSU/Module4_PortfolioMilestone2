@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8209f13-f8dc-4983-a1bf-92a9866a2741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Module4_PortfolioMilestone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d8209f13-f8dc-4983-a1bf-92a9866a2741" name="Changes" comment="version 1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/ShoppingCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/ShoppingCart.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +23,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RLAatCSU&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RLAatCSU/Module4_PortfolioMilestone.git&quot;,
+    &quot;accountId&quot;: &quot;543c9cf4-ca8d-4c29-92b7-7129c063df8b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2mib9xG2I4lCMpAJMW11gnFMXaG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,7 +48,9 @@
   "keyToString": {
     "Python.ShoppingCart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/rick/PycharmProjects/Module1/Module4_PortfolioMilestone"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -59,6 +69,27 @@
       <option name="presentableId" value="Default" />
       <updated>1727562195265</updated>
     </task>
+    <task id="LOCAL-00001" summary="version 1.0">
+      <option name="closed" value="true" />
+      <created>1727575203876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727575203876</updated>
+    </task>
+    <task id="LOCAL-00002" summary="version 1.0">
+      <option name="closed" value="true" />
+      <created>1727575380593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727575380593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1.0" />
   </component>
 </project>
