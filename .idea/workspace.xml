@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8209f13-f8dc-4983-a1bf-92a9866a2741" name="Changes" comment="version 1.0">
+    <list default="true" id="d8209f13-f8dc-4983-a1bf-92a9866a2741" name="Changes" comment="version 2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/ShoppingCart.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/ShoppingCart.py" afterDir="false" />
     </list>
@@ -50,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/rick/PycharmProjects/Module1/Module4_PortfolioMilestone"
+    "last_opened_file_path": "C:/Users/rick/PycharmProjects/Module1/Module5"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -85,11 +85,20 @@
       <option name="project" value="LOCAL" />
       <updated>1727575380593</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="version 2.0">
+      <option name="closed" value="true" />
+      <created>1728763876671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728763876671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.0" />
+    <MESSAGE value="version 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2.0" />
   </component>
 </project>
