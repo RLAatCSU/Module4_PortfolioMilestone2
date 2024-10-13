@@ -88,22 +88,31 @@ class ShoppingCart:
 
 #Method print_total()
     def print_total(self):
-        print(self.customer_name + "'s Shopping Cart - " + self.current_date)
-        self.get_num_items_in_cart()
-        print('Number of Items:', self.cart_qty)
-        for i in self.cart_items:
-            i.find_item_total()
-            i.print_item_cost()
-        self.get_cost_of_cart()
-        print('Total: $' + '{:.2f}'.format(self.cart_total))
+        if len(self.cart_items) > 0:
+            print(self.customer_name + "'s Shopping Cart - " + self.current_date)
+            self.get_num_items_in_cart()
+            print('Number of Items:', self.cart_qty)
+            for i in self.cart_items:
+                i.find_item_total()
+                i.print_item_cost()
+            self.get_cost_of_cart()
+            print('Total: $' + '{:.2f}'.format(self.cart_total))
+        else:
+            print('SHOPPING CART IS EMPTY')
 
 #Method print_descriptions()  Outputs each item's description.
     def print_descriptions(self):
-        print(self.customer_name + "'s Shopping Cart - " + self.current_date)
-        print("Item Descriptions")
-        for i in self.cart_items:
-            print(i.item_name + ": "+ i.item_description)
+        if len(self.cart_items) > 0:
+            print(self.customer_name + "'s Shopping Cart - " + self.current_date)
+            print("Item Descriptions")
+            for i in self.cart_items:
+                print(i.item_name + ": "+ i.item_description)
+        else:
+            print('SHOPPING CART IS EMPTY')
 
+#Function print_menu()  has a ShoppingCart parameter and outputs a menu of options to manipulate the shopping cart.
+#Each option is representedi
+#by a single character. Build and output the menu within the function.
 def print_menu(ShoppingCart):
     menuInput = ""
     while menuInput != "q":
@@ -118,10 +127,6 @@ def print_menu(ShoppingCart):
         menuInput = input()
 
         if menuInput == "a":
-            #ItemToPurchase.item_name = "none"
-            #ItemToPurchase.item_description = "none"
-            #ItemToPurchase.item_price = 0.0
-            #ItemToPurchase.item_quantity = 0
             itemEntry = ItemToPurchase()
             input_item(itemEntry)
             ShoppingCart.add_item(itemEntry)
@@ -149,7 +154,8 @@ def print_menu(ShoppingCart):
             print("Invalid entry, please try again")
             print()
 
-
+#Function input_item  Enter the Item Name, Description, Price, and Quantity for the item.
+#Calculate the total item cost
 def input_item(ItemToPurchase):
     print("Enter the item name:")
     ItemToPurchase.item_name = input()
@@ -161,118 +167,12 @@ def input_item(ItemToPurchase):
     ItemToPurchase.item_quantity = int(input())
     ItemToPurchase.find_item_total()
 
-                #Define objects of the class ItemToPurchase()
-item01 = ItemToPurchase()
-#item02 = ItemToPurchase()
+#Define objects of the class ShoppingCart()
 cart01 = ShoppingCart()
-#testlist = []
+
+#Add name and date
 cart01.customer_name = "John Doe"
 cart01.current_date = "February 1, 2020"
-#input_item(item01)
 
-#item01.print_item_cost()
-#print_menu(cart01, item01)
+#Run the method print_menu(cart01)
 print_menu(cart01)
-#print(len(cart01.cart_items))
-#print(cart01.cart_items)
-
-#input item01 attributes
-#print("Item 1")
-#print("Enter the item name:")
-#item01.item_name = input()
-#print("Enter the item description:")
-#item01.item_description = input()
-#print("Enter the item price:")
-#item01.item_price = float(input())
-#print("Enter the item quantity:")
-#item01.item_quantity = int(input())
-
-#input_item(item01)
-#print("Item 1")
-#print("Enter the item name:")
-#item01.item_name = input()
-#print("Enter the item description:")
-#item01.item_description = input()
-#print("Enter the item price:")
-#item01.item_price = float(input())
-#print("Enter the item quantity:")
-#item01.item_quantity = int(input())
-#cart01.add_item(item01)
-#cart01.cart_items.append(item01)
-#testlist.append(item01)
-#input_item(item01)
-#item01 = ItemToPurchase()
-#print("Item 2")
-#print("Enter the item name:")
-#item01.item_name = input()
-#print("Enter the item description:")
-#item01.item_description = input()
-#print("Enter the item price:")
-#item01.item_price = float(input())
-#print("Enter the item quantity:")
-#item01.item_quantity = int(input())
-#cart01.add_item(item01)
-#cart01.cart_items.append(item02)
-#testlist.append(item01)
-#print(cart01.cart_items[0].item_name)
-#print(cart01.cart_items[0].item_description)
-#print(cart01.cart_items[0].item_price)
-#print(cart01.cart_items[0].item_quantity)
-#print(cart01.cart_items[0].item_total)
-#print(cart01.cart_items[1].item_name)
-#print(cart01.cart_items[1].item_description)
-#print(cart01.cart_items[1].item_price)
-#print(cart01.cart_items[1].item_quantity)
-#print(cart01.cart_items[1].item_total)
-
-#print(testlist[0].item_name)
-#print(testlist[0].item_description)
-#print(testlist[0].item_price)
-#print(testlist[0].item_quantity)
-#print(testlist[0].item_total)
-#print(testlist[1].item_name)
-#print(testlist[1].item_description)
-#print(testlist[1].item_price)
-#print(testlist[1].item_quantity)
-#print(testlist[1].item_total)
-
-#cart01.print_total()
-#cart01.print_descriptions()
-
-#itemAddRemove = 'none'
-#itemAddRemove = input('Enter Item to Remove: ')
-#cart01.remove_item(itemAddRemove)
-#cart01.get_num_items_in_cart()
-#print('Items in cart: ', cart01.cart_qty)
-#cart01.get_cost_of_cart()
-#print('Cost of cart: ', cart01.cart_total)
-
-
-
-#input item02 attributes
-#print("Item 2\n")
-#print("Enter the item name:\n")
-#item02.item_name = input()
-#print()
-#print("Enter the item price:\n")
-#item02.item_price = float(input())
-#print()
-#print("Enter the item quantity:\n")
-#item02.item_quantity = int(input())
-#print()
-
-#cart01.modify_item(item02)
-
-#print(cart01.cart_items[0].item_name)
-#print(cart01.cart_items[0].item_price)
-#print(cart01.cart_items[0].item_quantity)
-
-
-
-#find total cost and print results
-#print("TOTAL COST\n")
-#item01.find_item_total()
-#item01.print_item_cost()
-#item02.find_item_total()
-#item02.print_item_cost()
-#print("Total: $" + '{:.2f}'.format(item01.item_total + item02.item_total))
