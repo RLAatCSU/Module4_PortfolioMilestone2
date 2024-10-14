@@ -56,23 +56,29 @@ class ShoppingCart:
 #If item cannot be found (by name) in cart, output this message: Item not found in cart. Nothing modified.
     def modify_item(self, ItemToPurchase):
         didChange = False
-        makeChange = True
-        if (ItemToPurchase.item_name == "none" and ItemToPurchase.item_name == "none" and
-                ItemToPurchase.item_price == 0.0 or ItemToPurchase.item_quantity == 0):
-            makeChange = False
-            didChange = True
-            print('Default values passed, nothing updated')
+        itemFound = False
 
-        if makeChange == True:
-            for i in self.cart_items:
-                if ItemToPurchase.item_name == i.item_name:
-                    updateIndex = self.cart_items.index(i)
+        for i in self.cart_items:
+            if ItemToPurchase.item_name == i.item_name:
+                itemFound = True
+                updateIndex = self.cart_items.index(i)
+                if ItemToPurchase.item_description != "none":
+                    self.cart_items[updateIndex].item_description = ItemToPurchase.item_description
+                    didChange = True
+
+                if ItemToPurchase.item_price != 0.0:
                     self.cart_items[updateIndex].item_price = ItemToPurchase.item_price
+                    didChange = True
+
+                if ItemToPurchase.item_quantity != 0:
                     self.cart_items[updateIndex].item_quantity = ItemToPurchase.item_quantity
                     didChange = True
 
-        if didChange == False:
+        if itemFound == False:
             print('Item not found in cart. Nothing modified.')
+
+        if itemFound == True and didChange == False:
+            print('Item found in cart, but no changes made.')
 
 #Method get_num_items_in_cart() Returns quantity of all items in cart. Has no parameters.
     def get_num_items_in_cart(self):
@@ -137,7 +143,9 @@ def print_menu(ShoppingCart):
             print()
 
         elif menuInput == "c":
-            print("Change Item Quantity in Cart")
+            itemEntry = ItemToPurchase()
+            change_item(itemEntry)
+            ShoppingCart.modify_item(itemEntry)
 
         elif menuInput == "i":
             ShoppingCart.print_descriptions()
@@ -157,14 +165,41 @@ def print_menu(ShoppingCart):
 #Function input_item  Enter the Item Name, Description, Price, and Quantity for the item.
 #Calculate the total item cost
 def input_item(ItemToPurchase):
+    tempString = ""
     print("Enter the item name:")
     ItemToPurchase.item_name = input()
     print("Enter the item description:")
     ItemToPurchase.item_description = input()
     print("Enter the item price:")
-    ItemToPurchase.item_price = float(input())
+    tempString = input()
+    if tempString != "":
+        ItemToPurchase.item_price = float(tempString)
     print("Enter the item quantity:")
-    ItemToPurchase.item_quantity = int(input())
+    tempString = input()
+    if tempString != "":
+        ItemToPurchase.item_quantity = int(tempString)
+    ItemToPurchase.find_item_total()
+
+#Function input_item  Enter the Item Name, Description, Price, and Quantity for the item.
+#Calculate the total item cost
+def change_item(ItemToPurchase):
+    tempString = ""
+    print("Enter the name of the itme to change:")
+    ItemToPurchase.item_name = input()
+    print("Enter the new item description, or press enter to leave unchanged:")
+    tempString = input()
+    if tempString == "":
+        ItemToPurchase.item_description = "none"
+    else:
+        ItemToPurchase.item_description = tempString
+    print("Enter the new item price, or press enter to leave unchanged:")
+    tempString = input()
+    if tempString != "":
+        ItemToPurchase.item_price = float(tempString)
+    print("Enter the new item quantity, or press enter to leave unchanged:")
+    tempString = input()
+    if tempString != "":
+        ItemToPurchase.item_quantity = int(tempString)
     ItemToPurchase.find_item_total()
 
 #Define objects of the class ShoppingCart()
