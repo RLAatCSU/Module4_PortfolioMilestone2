@@ -184,7 +184,7 @@ def input_item(ItemToPurchase):
 #Calculate the total item cost
 def change_item(ItemToPurchase):
     tempString = ""
-    print("Enter the name of the itme to change:")
+    print("Enter the name of the item to change:")
     ItemToPurchase.item_name = input()
     print("Enter the new item description, or press enter to leave unchanged:")
     tempString = input()
