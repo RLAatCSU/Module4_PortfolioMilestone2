@@ -62,13 +62,13 @@ class ShoppingCart:
             if ItemToPurchase.item_name == i.item_name:
                 itemFound = True
                 updateIndex = self.cart_items.index(i)
-                if ItemToPurchase.item_description != "none":
-                    self.cart_items[updateIndex].item_description = ItemToPurchase.item_description
-                    didChange = True
+                #if ItemToPurchase.item_description != "none":
+                #    self.cart_items[updateIndex].item_description = ItemToPurchase.item_description
+                #    didChange = True
 
-                if ItemToPurchase.item_price != 0.0:
-                    self.cart_items[updateIndex].item_price = ItemToPurchase.item_price
-                    didChange = True
+                #if ItemToPurchase.item_price != 0.0:
+                #    self.cart_items[updateIndex].item_price = ItemToPurchase.item_price
+                #    didChange = True
 
                 if ItemToPurchase.item_quantity != 0:
                     self.cart_items[updateIndex].item_quantity = ItemToPurchase.item_quantity
@@ -186,17 +186,18 @@ def change_item(ItemToPurchase):
     tempString = ""
     print("Enter the name of the item to change:")
     ItemToPurchase.item_name = input()
-    print("Enter the new item description, or press enter to leave unchanged:")
-    tempString = input()
-    if tempString == "":
-        ItemToPurchase.item_description = "none"
-    else:
-        ItemToPurchase.item_description = tempString
-    print("Enter the new item price, or press enter to leave unchanged:")
-    tempString = input()
-    if tempString != "":
-        ItemToPurchase.item_price = float(tempString)
-    print("Enter the new item quantity, or press enter to leave unchanged:")
+    #print("Enter the new item description, or press enter to leave unchanged:")
+    #tempString = input()
+    #if tempString == "":
+    #    ItemToPurchase.item_description = "none"
+    #else:
+    #    ItemToPurchase.item_description = tempString
+    #print("Enter the new item price, or press enter to leave unchanged:")
+    #tempString = input()
+    #if tempString != "":
+    #    ItemToPurchase.item_price = float(tempString)
+    #print("Enter the new item quantity, or press enter to leave unchanged:")
+    print("Enter the new quantity:")
     tempString = input()
     if tempString != "":
         ItemToPurchase.item_quantity = int(tempString)
@@ -206,8 +207,10 @@ def change_item(ItemToPurchase):
 cart01 = ShoppingCart()
 
 #Add name and date
-cart01.customer_name = "John Doe"
-cart01.current_date = "February 1, 2020"
+cart01.customer_name = input("Enter customer's name:\n")
+cart01.current_date = input("Enter today's date:\n")
+print("Customer name: " + cart01.customer_name)
+print("Today's date: " + cart01.current_date)
 
 #Run the method print_menu(cart01)
 print_menu(cart01)
